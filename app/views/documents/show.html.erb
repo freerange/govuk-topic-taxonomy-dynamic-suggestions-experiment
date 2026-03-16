@@ -1,4 +1,4 @@
-<h1><%= @document.title %></h1>
+<h1><%= link_to @document.title, @document.govuk_url %></h1>
 
 <ol>
   <% @similar_documents.each do |document| %>
