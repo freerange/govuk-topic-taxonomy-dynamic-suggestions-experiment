@@ -2,6 +2,6 @@
 
 <ol>
   <% @similar_documents.each do |document| %>
-    <li><%= document.title %></li>
+    <li><%= link_to document.title, document_path(document) %></li>
   <% end %>
 </ol>
