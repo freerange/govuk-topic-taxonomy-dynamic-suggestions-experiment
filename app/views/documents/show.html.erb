@@ -18,13 +18,15 @@
   <p>The document has no taxons.</p>
 <% end %>
 
-<h2>Similar documents</h2>
+<% if params[:debug] %>
+  <h2>Similar documents</h2>
 
-<ol>
-  <% @similar_documents.each do |document| %>
-    <li><%= link_to document.title, document_path(document) %></li>
-  <% end %>
-</ol>
+  <ol>
+    <% @similar_documents.each do |document| %>
+      <li><%= link_to document.title, document_path(document) %></li>
+    <% end %>
+  </ol>
+<% end %>
 
 <h2>Suggested taxons</h2>
 

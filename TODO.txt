@@ -1,7 +1,5 @@
 Display the full taxon tree for each suggestion
 
-Promote the suggested taxons over the similar documents. The similar documents are only really there so that we can describe how we derived the suggested taxons.
-
 Use design system to make it look more GOV.UK'y
 
 Consistent use of "taxon" or "tag" in UI
