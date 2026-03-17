@@ -1,4 +1,4 @@
-<h1>
+<h1 class="govuk-heading-l">
   <% if @document.govuk_url.present? %>
     <%= link_to @document.title, @document.govuk_url %>
   <% else %>
@@ -6,36 +6,36 @@
   <% end %>
 </h1>
 
-<h2>Taxons</h2>
+<h2 class="govuk-heading-m">Taxons</h2>
 
 <% if @document.taxons.any? %>
-  <ol>
+  <ol class="govuk-list govuk-list--number">
     <% @document.taxons.each do |taxon| %>
       <li><%= taxon['title'] %></li>
     <% end %>
   </ol>
 <% else %>
-  <p>The document has no taxons.</p>
+  <p class="govuk-body">The document has no taxons.</p>
 <% end %>
 
 <% if params[:debug] %>
-  <h2>Similar documents</h2>
+  <h2 class="govuk-heading-m">Similar documents</h2>
 
-  <ol>
+  <ol class="govuk-list govuk-list--number">
     <% @similar_documents.each do |document| %>
-      <li><%= link_to document.title, document_path(document) %></li>
+      <li><%= link_to document.title, document_path(document), class: "govuk-link" %></li>
     <% end %>
   </ol>
 <% end %>
 
-<h2>Suggested taxons</h2>
+<h2 class="govuk-heading-m">Suggested taxons</h2>
 
 <% if @suggested_taxons.any? %>
-  <ol>
+  <ol class="govuk-list govuk-list--number">
     <% @suggested_taxons.each do |title, taxons| %>
       <li><%= title %> (<%= taxons.length %>)</li>
     <% end %>
   </ol>
 <% else %>
-  <p>There are no other suitable taxons.</p>
+  <p class="govuk-body">There are no other suitable taxons.</p>
 <% end %>

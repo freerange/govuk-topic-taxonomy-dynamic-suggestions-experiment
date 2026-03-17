@@ -1,19 +1,42 @@
-<h1>
+<h1 class="govuk-heading-l">
   New document
 </h1>
 
-<% if flash[:alert] %>
-  <p><%= flash[:alert] %></p>
+<% if flash[:errors].present? %>
+  <div class="govuk-error-summary" data-module="govuk-error-summary">
+    <div role="alert">
+      <h2 class="govuk-error-summary__title">
+        There is a problem
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list">
+          <% flash[:errors].each do |error| %>
+            <li>
+              <%= error %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
 <% end %>
 
 <%= form_for @document do |form| %>
-  <div>
-    <%= form.text_field :title %>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="document-title">
+      Enter the title of the document
+    </label>
+    <%= form.text_field :title, id: "document-title", class: "govuk-input" %>
   </div>
-  <div>
-    <%= form.textarea :body, cols: '100', rows: '25' %>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="document-body">
+      Enter the body of the document
+    </label>
+    <%= form.textarea :body, id: "document-body", cols: '100', rows: '20', class: "govuk-textarea" %>
   </div>
+
   <div>
-    <%= form.submit 'Suggest tags!' %>
+    <%= form.submit 'Suggest tags', class: "govuk-button", data: { module: "govuk-button" } %>
   </div>
 <% end %>

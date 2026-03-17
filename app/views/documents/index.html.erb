@@ -1,9 +1,9 @@
-<h1>Documents</h1>
+<h1 class="govuk-heading-l">Documents</h1>
 
-<p><%= link_to 'New document', new_document_path %></p>
+<p class="govuk-body"><%= link_to 'New document', new_document_path, class: "govuk-link" %></p>
 
-<ul>
+<ul class="govuk-list govuk-list--bullet">
 <% @documents.each do |document| %>
-  <li><%= link_to document.title, document_path(document) %></li>
+  <li><%= link_to document.title, document_path(document), class: "govuk-link" %></li>
 <% end %>
 </ul>
