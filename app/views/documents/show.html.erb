@@ -8,11 +8,15 @@
 
 <h2>Taxons</h2>
 
-<ol>
-  <% @document.taxons.each do |taxon| %>
-    <li><%= taxon['title'] %></li>
-  <% end %>
-</ol>
+<% if @document.taxons.any? %>
+  <ol>
+    <% @document.taxons.each do |taxon| %>
+      <li><%= taxon['title'] %></li>
+    <% end %>
+  </ol>
+<% else %>
+  <p>The document has no taxons.</p>
+<% end %>
 
 <h2>Similar documents</h2>
 
