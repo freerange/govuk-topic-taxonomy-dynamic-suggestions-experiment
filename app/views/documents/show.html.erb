@@ -19,9 +19,7 @@
 <h2>Suggested taxons</h2>
 
 <ol>
-  <% @similar_documents.each.with_index do |document, index| %>
-    <% document.taxons.each do |taxon| %>
-      <li><%= taxon['title'] %> (<%= index + 1 %>)</li>
-    <% end %>
+  <% @suggested_taxons.each do |taxon| %>
+    <li><%= taxon['title'] %></li>
   <% end %>
 </ol>
