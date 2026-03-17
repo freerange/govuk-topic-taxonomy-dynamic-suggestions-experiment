@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-  root "documents#index"
+  get '/', to: redirect('/documents')
 
-  resources :documents, only: [:show, :new, :create]
+  resources :documents, only: [:index, :show, :new, :create]
 end
