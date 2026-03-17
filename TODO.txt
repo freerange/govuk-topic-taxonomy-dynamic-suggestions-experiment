@@ -6,6 +6,8 @@ Use design system to make it look more GOV.UK'y
 
 Add index to embedding column to speed up queries on Render
 
+Consistent use of "taxon" or "tag" in UI
+
 ---
 
 Ensure we always recommend n? taxons (e.g. by not necessarily taking just the first 5 similar documents)
