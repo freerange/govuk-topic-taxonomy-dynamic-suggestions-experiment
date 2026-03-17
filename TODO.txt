@@ -1,7 +1,3 @@
-Store user-entered content in database so that we can redirect to the show page
-  Possibly expire it after some period of time
-  Possibly don't show it on the index page
-
 Add link to new document form
 
 Don't linkify title for new documents
