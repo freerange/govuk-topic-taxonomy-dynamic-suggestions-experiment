@@ -1,12 +1,21 @@
 Display the full taxon tree for each suggestion
+  Use "Breadcrumbs" component from Design System?
 
-Use design system to make it look more GOV.UK'y
+Include similar documents by default?
+
+Separate link to document on GOV.UK from heading?
 
 Consistent use of "taxon" or "tag" in UI
 
 Update README to explain what it does/how to get it running
 
 Add README for https://github.com/freerange/gds-topic-suggestion
+
+Add "Back links" using Design System?
+
+Add a "Phase banner" to indicate this is in "alpha"?
+
+Tidy up GOV.UK footer
 
 ---
 
