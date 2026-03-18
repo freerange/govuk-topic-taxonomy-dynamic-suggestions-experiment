@@ -1,3 +1,5 @@
+Include document title in page title for show page
+
 Consistent use of "taxon" or "tag" in UI
 
 Update README to explain what it does/how to get it running
