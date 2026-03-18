@@ -1,8 +1,6 @@
 Display the full taxon tree for each suggestion
   Use "Breadcrumbs" component from Design System?
 
-Include similar documents by default?
-
 Separate link to document on GOV.UK from heading?
 
 Consistent use of "taxon" or "tag" in UI
