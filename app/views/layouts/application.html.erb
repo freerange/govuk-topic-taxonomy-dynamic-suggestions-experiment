@@ -1,8 +1,9 @@
+<% app_title = "Topic taxonomy suggestions experiment" %>
 <!DOCTYPE html>
 <html lang="en" class="govuk-template">
   <head>
     <meta charset="utf-8">
-    <title><%= content_for(:title) || "GOV.UK Topic taxonomy suggestions experiment" %></title>
+    <title><%= content_for(:title) || "GOV.UK #{app_title}" %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#1d70b8">
 
@@ -68,7 +69,7 @@
     <div class="govuk-width-container">
       <main class="govuk-main-wrapper" id="main-content">
         <h1 class="govuk-heading-l">
-          Topic taxonomy suggestions experiment
+          <%= app_title %>
         </h1>
 
         <%= yield %>
