@@ -2,8 +2,6 @@ Update README to explain what it does/how to get it running
 
 Add README for https://github.com/freerange/gds-topic-suggestion
 
-Use "Tag" Design System component for each taxon?
-
 Tidy up GOV.UK footer
 
 ---
