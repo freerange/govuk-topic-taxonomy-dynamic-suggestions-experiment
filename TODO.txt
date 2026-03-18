@@ -6,6 +6,8 @@ Consistent use of "taxon" or "tag" in UI
 
 Update README to explain what it does/how to get it running
 
+Add README for https://github.com/freerange/gds-topic-suggestion
+
 ---
 
 Ensure we always recommend n? taxons (e.g. by not necessarily taking just the first 5 similar documents)
