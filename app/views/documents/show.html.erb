@@ -1,10 +1,12 @@
 <h1 class="govuk-heading-l">
-  <% if @document.govuk_url.present? %>
-    <%= link_to @document.title, @document.govuk_url %>
-  <% else %>
-    <%= @document.title %>
-  <% end %>
+  <%= @document.title %>
 </h1>
+
+<% if @document.govuk_url.present? %>
+  <p class="govuk-body">
+    <%= link_to "View document on GOV.UK (opens in new tab)", @document.govuk_url, class: "govuk-link", rel: "noreferrer noopener", target: "_blank" %>
+  </p>
+<% end %>
 
 <h2 class="govuk-heading-m">Taxons</h2>
 
