@@ -11,7 +11,18 @@
 <% if @document.taxons.any? %>
   <ol class="govuk-list govuk-list--number">
     <% @document.taxons.each do |taxon| %>
-      <li><%= taxon['title'] %></li>
+      <% taxon = Taxon.find_by(base_path: taxon['base_path']) %>
+      <li>
+        <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+          <ol class="govuk-breadcrumbs__list">
+            <% taxon.breadcrumbs.reverse.each do |taxon| %>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="#"><%= taxon.title %></a>
+              </li>
+            <% end %>
+          </ol>
+        </nav>
+      </li>
     <% end %>
   </ol>
 <% else %>
@@ -33,7 +44,18 @@
 <% if @suggested_taxons.any? %>
   <ol class="govuk-list govuk-list--number">
     <% @suggested_taxons.each do |title, taxons| %>
-      <li><%= title %> (<%= taxons.length %>)</li>
+      <% taxon = Taxon.find_by(base_path: taxons.first['base_path']) %>
+      <li>
+        <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+          <ol class="govuk-breadcrumbs__list">
+            <% taxon.breadcrumbs.reverse.each do |taxon| %>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="#"><%= taxon.title %></a>
+              </li>
+            <% end %>
+          </ol>
+        </nav>
+      </li>
     <% end %>
   </ol>
 <% else %>
