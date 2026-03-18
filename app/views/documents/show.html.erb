@@ -1,6 +1,6 @@
-<h1 class="govuk-heading-l">
+<h2 class="govuk-heading-m">
   <%= @document.title %>
-</h1>
+</h2>
 
 <% if @document.govuk_url.present? %>
   <p class="govuk-body">
@@ -8,7 +8,7 @@
   </p>
 <% end %>
 
-<h2 class="govuk-heading-m">Taxons</h2>
+<h3 class="govuk-heading-s">Taxons</h3>
 
 <% if @document.taxons.any? %>
   <ol class="govuk-list govuk-list--number">
@@ -21,7 +21,7 @@
   <p class="govuk-body">The document has no taxons.</p>
 <% end %>
 
-<h2 class="govuk-heading-m">Suggested taxons</h2>
+<h3 class="govuk-heading-s">Suggested taxons</h3>
 
 <% if @suggested_taxons.any? %>
   <ol class="govuk-list govuk-list--number">
@@ -34,7 +34,7 @@
   <p class="govuk-body">There are no other suitable taxons.</p>
 <% end %>
 
-<h2 class="govuk-heading-m">Similar documents</h2>
+<h3 class="govuk-heading-s">Similar documents</h3>
 <p class="govuk-body">These are the 5 documents most similar to the source document, from which we've derived the suggested taxons above.</p>
 
 <ol class="govuk-list govuk-list--number">
