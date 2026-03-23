@@ -1,24 +1,3 @@
-# README
+# GOV.UK Topic Taxonomy Suggestions Experiment
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A simple Rails app demonstrating how document similarity could be used to come up with [Topic Taxonomy](https://docs.publishing.service.gov.uk/manual/taxonomy.html) tag suggestions for new or existing documents on GOV.UK.
